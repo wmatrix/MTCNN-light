@@ -11,3 +11,6 @@ AUX_SOURCE_DIRECTORY(./src DIR_SRCS)
 add_executable( main ${DIR_SRCS})
 target_link_libraries( main ${OpenCV_LIBS} )
 target_link_libraries( main openblas)
+
+install(TARGETS main DESTINATION bin)
+install(FILES 2.png 4.jpg Onet.txt Pnet.txt Rnet.txt DESTINATION bin)
